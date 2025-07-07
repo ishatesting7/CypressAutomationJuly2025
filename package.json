@@ -1,0 +1,16 @@
+{
+  "name": "cypressautomationjuly2025",
+  "version": "1.0.0",
+  "description": "This is the cypress course with javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "runqa":"npx cypress run",
+    "openCypress":"npx cypress open"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^14.5.1"
+  }
+}
