@@ -57,5 +57,18 @@ intelliJ
 Eclipse
 cursor
 
+============================
+Assignment - 10th July 2025
+
+Create a JS Program - 
+
+1. Use for, forEach and retrieve the data from JSON, Javascript variable
+Get Data from - https://autotestdata.com/
+
+2. Use conditional statement to validate the Boundry Value 
+(age<12 - Not Eligible)
+(age>12 and age<20 - Ready)
+(age>20 and age<30 - Enroll)
+
 
 
