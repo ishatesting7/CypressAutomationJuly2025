@@ -56,6 +56,12 @@ pyCharm
 intelliJ
 Eclipse
 cursor
+===========================
+-> git status - It will help understand the change which has been done by us once you clone
+-> git add <filename> will add that file to Staging area
+-> git add . -> will add all the file to Staging area
+-> git commit -m "Commit Message" -> It will commit the changes
+-> git push main origin
 
 ============================
 Assignment - 10th July 2025

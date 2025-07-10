@@ -8,7 +8,7 @@
     "runqa": "npx cypress run",
     "openCypress": "npx cypress open"
   },
-  "author": "",
+  "author": "Demo",
   "license": "ISC",
   "devDependencies": {
     "@faker-js/faker": "^9.9.0",
