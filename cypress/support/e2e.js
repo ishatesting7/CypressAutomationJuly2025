@@ -17,3 +17,6 @@
 import './commands'
 
 /// <reference types="cypress" />
+
+require('cypress-xpath');
+

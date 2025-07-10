@@ -5,12 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "runqa":"npx cypress run",
-    "openCypress":"npx cypress open"
+    "runqa": "npx cypress run",
+    "openCypress": "npx cypress open"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^14.5.1"
+    "@faker-js/faker": "^9.9.0",
+    "cypress": "^14.5.1",
+    "cypress-xpath": "^2.0.1"
   }
 }

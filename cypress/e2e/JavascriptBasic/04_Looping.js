@@ -34,3 +34,90 @@ role="presentation" class="oxd-icon oxd-main-menu-item--icon">
 
 //a[id='mz-product-grid-image-28-212408'] div[class='carousel-item active']
 //[class="product-layout product-grid no-desc col-xl-4 col-lg-4 col-md-4 col-sm-6 col-6"]:nth-child(3)
+// text()
+
+let k = 0;
+
+while(k < 10)
+{
+    console.log("I am in while loop");
+    k++;
+}
+
+let m = 1;
+
+do
+{
+    console.log('I am in do while')
+    m++;
+}   
+while(m<5);
+
+//Array
+let countryName = ["USA", "NZ", "India"] //Expected Value
+
+for(let cn of countryName)
+{
+    console.log(cn);
+}
+
+let personDetail = {
+    firstname:"John",
+    lastname:"Doe",
+    age:12
+}
+
+for(let demo in personDetail)
+{
+    console.log(`${demo}: ${personDetail[demo]}`)
+}
+
+var data =[
+	{
+		"full_name":"Adele Schiller",
+		"phone":"+1 020-136-6365",
+		"email":"adele18@hotmail.com"
+	},
+	{
+		"full_name":"Alia Upton",
+		"phone":"+1 996-353-8731",
+		"email":"alia.upton@gmail.com"
+	},
+	{
+		"full_name":"Vesta Erdman",
+		"phone":"+1 761-048-0461",
+		"email":"vesta.erdman@yahoo.com"
+	},
+    {
+		"full_name":"Vesta Erdman",
+		"phone":"+1 761-048-0461",
+		"email":"vesta.erdman@yahoo.com"
+	}
+
+];
+
+const tempo = 140;
+
+data.forEach((item, index) =>{
+
+    console.log(`Record Number - ${index + 1} `)
+    console.log(`Full name - ${item.full_name}`)
+    console.log(`Phone Number - ${item.phone}`)
+    console.log(`Email - ${item.email}`);
+    if(` ${item.full_name}` === 'Adele Schiller' && `${item.email}` === 'adele18@hotmail.com' )
+    {
+        console.log(tempo, `Phone Number - ${item.phone}`)
+    }
+
+})
+
+for(const [index, item] of data.entries())
+{
+    console.log(`Record Number - ${index + 1} `)
+    console.log(`Full name - ${item.full_name}`)
+    console.log(`Phone Number - ${item.phone}`)
+    console.log(`Email - ${item.email}`);
+}
+
+
+
