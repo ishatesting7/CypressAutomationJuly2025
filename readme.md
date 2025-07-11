@@ -56,6 +56,7 @@ pyCharm
 intelliJ
 Eclipse
 cursor
+
 ===========================
 -> git status - It will help understand the change which has been done by us once you clone
 -> git add <filename> will add that file to Staging area
@@ -64,7 +65,7 @@ cursor
 -> git push main origin
 
 ============================
-Assignment - 10th July 2025
+Assignment - 10th July 2025 
 
 Create a JS Program - 
 

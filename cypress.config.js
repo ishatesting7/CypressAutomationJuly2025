@@ -5,6 +5,7 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
+    //retries:4,
     env: {
       foo: 'bar',
       baz: 'quux',
