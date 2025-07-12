@@ -77,5 +77,12 @@ Get Data from - https://autotestdata.com/
 (age>12 and age<20 - Ready)
 (age>20 and age<30 - Enroll)
 
-
+------------------------------------------------------------
+Assignment - 12th July 2025
+Write a JS Program for below cases - 
+1. Check if a Number is Even or Odd
+2. Reverse a String
+3. Find the Largest Number in an Array
+4. Sum All Numbers in an Array
+5. Check if a String is a Palindrome
 
