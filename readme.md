@@ -86,3 +86,19 @@ Write a JS Program for below cases -
 4. Sum All Numbers in an Array
 5. Check if a String is a Palindrome
 
+-------------------------------------------------------------
+get()
+visit()
+should()
+click()
+type()
+pause()
+wait()
+it.only()
+it.skip()
+--> Assertion
+
+Assignment - 14th July 2025
+---------------------------
+1. Create a test case -https://ecommerce-playground.lambdatest.io/index.php?route=account/login - You need to register with unique user-email. Every time I need new email address.
+2. Login with Same user.
