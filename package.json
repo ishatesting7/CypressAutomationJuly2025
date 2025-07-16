@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "runqa": "npx cypress run",
-    "openCypress": "npx cypress open"
+    "openCypress": "npx cypress open",
+    "runInChrome":"npx cypress run --spec cypress/e2e/CypressAutomation/TC005CaptureScreenshotAndVideo.cy.js --browser chrome",
+    "runSpecificFile":"npx cypress run --spec cypress/e2e/CypressAutomation/TC005CaptureScreenshotAndVideo.cy.js "
   },
   "author": "Demo",
   "license": "ISC",

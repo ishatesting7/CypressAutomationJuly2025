@@ -101,4 +101,18 @@ it.skip()
 Assignment - 14th July 2025
 ---------------------------
 1. Create a test case -https://ecommerce-playground.lambdatest.io/index.php?route=account/login - You need to register with unique user-email. Every time I need new email address.
+
 2. Login with Same user.
+
+Assignemtn - 16th July 2025
+---------------------------
+
+1. Failed -> Screenshot and Video -> Forcefully fail some test
+2. Go through -> https://docs.cypress.io/api/commands/screenshot -> Add this in it block 
+
+Note - Add below in cypress.config.js --
+
+screenshotOnRunFailure:true, //This is for headless mode
+video:true,
+
+
