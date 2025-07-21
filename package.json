@@ -7,8 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "runqa": "npx cypress run",
     "openCypress": "npx cypress open",
-    "runInChrome":"npx cypress run --spec cypress/e2e/CypressAutomation/TC005CaptureScreenshotAndVideo.cy.js --browser chrome",
-    "runSpecificFile":"npx cypress run --spec cypress/e2e/CypressAutomation/TC005CaptureScreenshotAndVideo.cy.js "
+    "runInChrome": "npx cypress run --spec cypress/e2e/CypressAutomation/TC005CaptureScreenshotAndVideo.cy.js --browser chrome",
+    "runSpecificFile": "npx cypress run --spec cypress/e2e/CypressAutomation/TC005CaptureScreenshotAndVideo.cy.js "
   },
   "author": "Demo",
   "license": "ISC",
@@ -16,5 +16,8 @@
     "@faker-js/faker": "^9.9.0",
     "cypress": "^14.5.1",
     "cypress-xpath": "^2.0.1"
+  },
+  "dependencies": {
+    "@4tw/cypress-drag-drop": "^2.3.0"
   }
 }
