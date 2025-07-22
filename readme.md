@@ -116,3 +116,7 @@ screenshotOnRunFailure:true, //This is for headless mode
 video:true,
 
 
+Assignment - 22nd July
+----------------------
+1. Navigate - https://opensource-demo.orangehrmlive.com/web/index.php/admin/viewSystemUsers
+2. Under Admin -> User Management -> Create new user -> Delete the same user.
