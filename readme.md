@@ -120,3 +120,9 @@ Assignment - 22nd July
 ----------------------
 1. Navigate - https://opensource-demo.orangehrmlive.com/web/index.php/admin/viewSystemUsers
 2. Under Admin -> User Management -> Create new user -> Delete the same user.
+
+
+Assignment - 25th July
+----------------------
+
+1. https://testautomationpractice.blogspot.com/ - Create around 7 to 8 IT block for handling alerts, checkbox, radiobutton, dropdown, textboxes
