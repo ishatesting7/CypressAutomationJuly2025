@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lemonade Change Challenge</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background: #fdf6e3;
+    }
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+    button {
+      background-color: #f4c430;
+      border: none;
+      cursor: pointer;
+    }
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🍋 Lemonade Change Challenge</h1>
+
+  <label for="billsInput">Enter customer bills (comma-separated):</label><br>
+  <input type="text" id="billsInput" placeholder="e.g. 5,5,5,10,20"><br>
+  <button onclick="checkLemonadeChange()">Check Change</button>
+
+  <div id="result"></div>
+
+  <script>
+    function lemonadeChange(bills) {
+      let five = 0, ten = 0;
+
+      for (let bill of bills) {
+        if (bill === 5) {
+          five++;
+        } else if (bill === 10) {
+          if (five === 0) return false;
+          five--;
+          ten++;
+        } else if (bill === 20) {
+          if (ten > 0 && five > 0) {
+            ten--;
+            five--;
+          } else if (five >= 3) {
+            five -= 3;
+          } else {
+            return false;
+          }
+        }
+      }
+
+      return true;
+    }
+
+    function checkLemonadeChange() {
+      const input = document.getElementById('billsInput').value;
+      const bills = input.split(',').map(Number);
+
+      const result = lemonadeChange(bills);
+      document.getElementById('result').textContent = 
+        result ? "✅ You can give correct change!" : "❌ You cannot give correct change.";
+    }
+  </script>
+
+</body>
+</html>

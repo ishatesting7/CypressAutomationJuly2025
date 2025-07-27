@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Puzzle - Array Except Self</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background-color: #f7f9fb;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+      width: 300px;
+      margin-top: 10px;
+    }
+
+    button {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      margin-top: 15px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+      color: #222;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🧩 Product Puzzle (Array Except Self)</h1>
+
+  <label for="arrayInput">Enter an array (comma-separated):</label><br>
+  <input type="text" id="arrayInput" placeholder="e.g. 1,2,3,4"><br>
+
+  <button onclick="calculateProductPuzzle()">Calculate</button>
+
+  <div id="result"></div>
+
+  <script>
+    function productExceptSelf(nums) {
+      const length = nums.length;
+      const result = new Array(length).fill(1);
+
+      let leftProduct = 1;
+      for (let i = 0; i < length; i++) {
+        result[i] = leftProduct;
+        leftProduct *= nums[i];
+      }
+
+      let rightProduct = 1;
+      for (let i = length - 1; i >= 0; i--) {
+        result[i] *= rightProduct;
+        rightProduct *= nums[i];
+      }
+
+      return result;
+    }
+
+    function calculateProductPuzzle() {
+      const input = document.getElementById('arrayInput').value.trim();
+      const nums = input.split(',').map(n => parseInt(n.trim(), 10));
+
+      if (nums.some(isNaN)) {
+        document.getElementById('result').textContent = "❌ Please enter valid numbers separated by commas.";
+        return;
+      }
+
+      const output = productExceptSelf(nums);
+      document.getElementById('result').textContent = "✅ Output: [" + output.join(", ") + "]";
+    }
+  </script>
+
+</body>
+</html>

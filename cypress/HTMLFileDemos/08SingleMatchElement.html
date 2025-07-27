@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>One Mismatch Word Finder</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background-color: #f9f9f9;
+    }
+    h1 {
+      color: #333;
+    }
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+      margin-top: 10px;
+      width: 100%;
+      max-width: 400px;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      margin-top: 15px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🔍 One Mismatch Word Finder</h1>
+
+  <label for="targetInput">Target Word:</label><br>
+  <input type="text" id="targetInput" placeholder="e.g. banaba"><br>
+
+  <label for="wordsInput">Words Array (comma-separated):</label><br>
+  <input type="text" id="wordsInput" placeholder="e.g. banana,bob,bans"><br>
+
+  <button onclick="findMismatch()">Find One Mismatch</button>
+
+  <div id="result"></div>
+
+  <script>
+    function findOneMismatchWord(target, words) {
+      let matches = [];
+
+      for (let word of words) {
+        if (word.length !== target.length) continue;
+
+        let mismatch = 0;
+        for (let i = 0; i < word.length; i++) {
+          if (word[i] !== target[i]) mismatch++;
+          if (mismatch > 1) break;
+        }
+
+        if (mismatch === 1) {
+          matches.push(word);
+        }
+      }
+
+      return matches;
+    }
+
+    function findMismatch() {
+      const target = document.getElementById('targetInput').value.trim();
+      const input = document.getElementById('wordsInput').value.trim();
+
+      if (!target || !input) {
+        document.getElementById('result').textContent = "Please enter both the target word and words array.";
+        return;
+      }
+
+      const words = input.split(',').map(w => w.trim());
+      const matches = findOneMismatchWord(target, words);
+
+      const resultDiv = document.getElementById('result');
+      if (matches.length > 0) {
+        resultDiv.textContent = "✅ One-mismatch match found: " + matches.join(", ");
+      } else {
+        resultDiv.textContent = "❌ No one-mismatch match found.";
+      }
+    }
+  </script>
+
+</body>
+</html>

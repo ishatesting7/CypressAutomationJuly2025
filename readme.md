@@ -126,3 +126,6 @@ Assignment - 25th July
 ----------------------
 
 1. https://testautomationpractice.blogspot.com/ - Create around 7 to 8 IT block for handling alerts, checkbox, radiobutton, dropdown, textboxes
+
+
+Testing Website - https://testautomationpractice.blogspot.com/p/playwrightpractice.html

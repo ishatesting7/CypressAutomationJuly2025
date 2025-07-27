@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Missing Number Finder</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background-color: #f2f2f2;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+      margin-top: 10px;
+      width: 300px;
+    }
+
+    button {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      margin-top: 15px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #218838;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🔎 Find the Missing Number</h1>
+
+  <label for="arrayInput">Enter array (comma-separated):</label><br>
+  <input type="text" id="arrayInput" placeholder="e.g. 0,1,2,4"><br>
+
+  <button onclick="findMissing()">Find Missing Number</button>
+
+  <div id="result"></div>
+
+  <script>
+    function findMissingNumber(arr) {
+      const n = arr.length;
+      const expectedSum = (n * (n + 1)) / 2;
+      const actualSum = arr.reduce((sum, num) => sum + num, 0);
+      return expectedSum - actualSum;
+    }
+
+    function findMissing() {
+      const input = document.getElementById('arrayInput').value.trim();
+      const arr = input.split(',').map(n => parseInt(n.trim(), 10));
+
+      if (arr.some(isNaN)) {
+        document.getElementById('result').textContent = "❌ Please enter valid numbers.";
+        return;
+      }
+
+      const missing = findMissingNumber(arr);
+      document.getElementById('result').textContent = `✅ Missing number is: ${missing}`;
+    }
+  </script>
+
+</body>
+</html>
