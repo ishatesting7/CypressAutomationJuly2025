@@ -1,7 +1,5 @@
 //This test will include dropdown, checkbox and radiobutton
-
 describe('Checkbox and Radio Button', ()=>{
-
 
     it('Checkbox and Radio Button', ()=>{
 
