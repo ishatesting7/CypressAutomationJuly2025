@@ -129,3 +129,7 @@ Assignment - 25th July
 
 
 Testing Website - https://testautomationpractice.blogspot.com/p/playwrightpractice.html
+
+
+
+DeploySentinel Chrome Extension for Record and Playback - https://chromewebstore.google.com/detail/deploysentinel-recorder/geggbdbnidkhbnbjoganapfhkpgkndfo

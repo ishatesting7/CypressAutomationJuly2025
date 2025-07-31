@@ -7,7 +7,8 @@ module.exports = defineConfig({
     },
     screenshotOnRunFailure:true, //This is for headless mode
     video:true,
-    //retries:4,
+    includeShadowDom: true, //This is for shadow dom
+    retries:1,
     watchForFileChanges:false,
     env: {
       foo: 'bar',

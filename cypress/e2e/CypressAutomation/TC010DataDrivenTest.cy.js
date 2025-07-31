@@ -14,7 +14,7 @@ describe('Read Value from JSON', ()=>{
             
             let username = atob(element.username);
             let password = btoa(element.password);
-            cy.get('[name="username"]').type(username);
+            cy.get('[name="username"]').type(username,{force:true});
             cy.get('[name="password"]').type(password, {log:false});
             cy.get('[type="submit"]').click({force:true});
 
