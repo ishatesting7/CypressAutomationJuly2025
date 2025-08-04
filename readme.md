@@ -133,3 +133,17 @@ Testing Website - https://testautomationpractice.blogspot.com/p/playwrightpracti
 
 
 DeploySentinel Chrome Extension for Record and Playback - https://chromewebstore.google.com/detail/deploysentinel-recorder/geggbdbnidkhbnbjoganapfhkpgkndfo
+
+
+Assignment - 1st Aug
+
+Page Object Model - 
+https://ecommerce-playground.lambdatest.io/index.php?route=account/login
+
+4 Pages
+-------
+Login
+Register
+Forgotten Password
+My Account
+

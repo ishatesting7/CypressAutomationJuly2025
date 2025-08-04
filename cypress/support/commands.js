@@ -27,7 +27,7 @@ import '@4tw/cypress-drag-drop'
 
 Cypress.Commands.add('loginIntoOrangeHRMS',(username, password)=>{
 
-    cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
+    //cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
 
     cy.get('[name="username"]').type(username);
     cy.get('[name="password"]').type(password, {log:false});

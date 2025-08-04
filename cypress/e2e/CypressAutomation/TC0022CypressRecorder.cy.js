@@ -24,6 +24,7 @@ describe('Example to Demonstrate Cypress Recorder by Deploy Sentinel', () => {
 
         // Click on <a> "Welcome Paul"
         cy.get('#welcome').click();
+        //js
 
         // Click on <a> "Logout"
         cy.get('[href="/index.php/auth/logout"]').click();

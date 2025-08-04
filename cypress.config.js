@@ -8,11 +8,12 @@ module.exports = defineConfig({
     screenshotOnRunFailure:true, //This is for headless mode
     video:true,
     includeShadowDom: true, //This is for shadow dom
-    retries:1,
+    retries:0,
     watchForFileChanges:false,
     env: {
       foo: 'bar',
       baz: 'quux',
     },
+    baseUrl:'https://opensource-demo.orangehrmlive.com/web/index.php'
   },
 });
