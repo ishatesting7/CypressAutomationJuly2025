@@ -18,6 +18,9 @@ import './commands'
 
 /// <reference types="cypress" />
 
+
+import 'cypress-mochawesome-reporter/register';
+
 require('cypress-xpath');
 
 const app = window.top;
