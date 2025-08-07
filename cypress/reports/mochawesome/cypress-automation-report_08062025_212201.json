@@ -1,0 +1,170 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-08-06T15:51:55.639Z",
+    "end": "2025-08-06T15:52:01.465Z",
+    "duration": 5826,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "aa6378b2-451e-4cc8-adee-b6f1330cf6b9",
+      "title": "",
+      "fullFile": "cypress/e2e/CypressAutomation/TC006AlertsDemo.cy.js",
+      "file": "cypress/e2e/CypressAutomation/TC006AlertsDemo.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a27acad1-c1d0-4e34-ab62-eeb731b4bae4",
+          "title": "Javascript Alert",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Javascript Alert",
+              "fullTitle": "Javascript Alert Javascript Alert",
+              "timedOut": null,
+              "duration": 2489,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/CypressAutomation/TC006AlertsDemo.cy.js\"\n}",
+              "code": "cy.visit('https://the-internet.herokuapp.com/javascript_alerts');\ncy.get('[onclick=\"jsAlert()\"]').click();\ncy.on('window:alert', temp => {\n  expect(temp).to.contain('I am a JS Alert');\n});\ncy.get('#result').should('have.text', 'You successfully clicked an alert');",
+              "err": {},
+              "uuid": "cd5af9b6-ae03-4301-9f8f-18f9c21b6315",
+              "parentUUID": "a27acad1-c1d0-4e34-ab62-eeb731b4bae4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Javascript Alert - Okay Click",
+              "fullTitle": "Javascript Alert Javascript Alert - Okay Click",
+              "timedOut": null,
+              "duration": 458,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/CypressAutomation/TC006AlertsDemo.cy.js\"\n}",
+              "code": "cy.visit('https://the-internet.herokuapp.com/javascript_alerts');\ncy.get('[onclick=\"jsConfirm()\"]').click();\ncy.on('window:confirm', temp => {\n  expect(temp).to.contain('I am a JS Confirm');\n});\ncy.get('#result').should('have.text', 'You clicked: Ok');",
+              "err": {},
+              "uuid": "162d527f-39ee-4301-844a-4bd7215a21f3",
+              "parentUUID": "a27acad1-c1d0-4e34-ab62-eeb731b4bae4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Javascript Alert - Cancel Click",
+              "fullTitle": "Javascript Alert Javascript Alert - Cancel Click",
+              "timedOut": null,
+              "duration": 466,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/CypressAutomation/TC006AlertsDemo.cy.js\"\n}",
+              "code": "cy.visit('https://the-internet.herokuapp.com/javascript_alerts');\ncy.get('[onclick=\"jsConfirm()\"]').click();\ncy.on('window:confirm', temp => {\n  expect(temp).to.contain('I am a JS Confirm');\n});\ncy.on('window:confirm', () => false);\ncy.get('#result').should('have.text', 'You clicked: Cancel');",
+              "err": {},
+              "uuid": "281015a6-b47a-42af-86e8-2e49beb924ba",
+              "parentUUID": "a27acad1-c1d0-4e34-ab62-eeb731b4bae4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Javascript Alert - Prompt Window",
+              "fullTitle": "Javascript Alert Javascript Alert - Prompt Window",
+              "timedOut": null,
+              "duration": 393,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/CypressAutomation/TC006AlertsDemo.cy.js\"\n}",
+              "code": "cy.visit('https://the-internet.herokuapp.com/javascript_alerts');\ncy.window().then(windo => {\n  cy.stub(windo, 'prompt').returns('I am new to Cypress');\n});\ncy.get('[onclick=\"jsPrompt()\"]').click();\ncy.get('#result').should('have.text', 'You entered: I am new to Cypress');",
+              "err": {},
+              "uuid": "73165e50-3f53-4e2e-8f79-d5581ea1a22f",
+              "parentUUID": "a27acad1-c1d0-4e34-ab62-eeb731b4bae4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "cd5af9b6-ae03-4301-9f8f-18f9c21b6315",
+            "162d527f-39ee-4301-844a-4bd7215a21f3",
+            "281015a6-b47a-42af-86e8-2e49beb924ba",
+            "73165e50-3f53-4e2e-8f79-d5581ea1a22f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3806,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "cypress-automation-report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss",
+        "charts": true,
+        "inlineAssets": true,
+        "embeddedScreenshots": true,
+        "reportPageTitle": "Cypress Automation Report",
+        "reportFilename": "cypress-automation-report",
+        "quiet": true,
+        "code": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
