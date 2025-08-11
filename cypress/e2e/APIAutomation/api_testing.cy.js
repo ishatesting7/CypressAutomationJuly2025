@@ -1,33 +1,83 @@
 describe('Restful Booker API Tests', () => {
     const apiUrl = 'https://restful-booker.herokuapp.com';
-  
+
+    let bookingBody;
+
+  //   let bookingBody = 
+  //   {
+  //     "firstname": "Lemuel",
+  //     "lastname": "Fay",
+  //     "totalprice": 111,
+  //     "depositpaid": true,
+  //     "bookingdates": {
+  //         "checkin": "2018-01-01",
+  //         "checkout": "2019-01-01"
+  //     },
+  //     "additionalneeds": "Breakfast"
+  // }
+
+   
+
+    /*
+    Way to pass Body in POST/PUT/PATCH requests:
+    1. Using variable creation
+    2. Directly in the request body
+    3. Using fixtures (recommended for larger payloads)
+    4. Using JSON files (recommended for larger payloads)
+    */
+
     let token;
     let bookingId;
+
+    it('API Calls', () => {
+    
+      cy.request({
+
+        method: 'GET',
+        url: `${apiUrl}/ping`, 
+        headers: { 'Content-Type': 'application/json',
+          'Accept': 'application/json',
+          'Cache-Control': 'no-cache',
+          'User-Agent': 'Cypress Test Agent',
+          'Authorization': 'Bearer test-token'
+        }
+      }).then((response) => {
+        cy.log(`Response: ${JSON.stringify(response.body)}`); // Log the response body
+        expect(response.status).to.eq(201);
+        expect(response.body).to.include('Created');
+        expect(response.duration).to.be.lessThan(2000);
+        expect(response.headers).to.have.property('content-type', 'text/plain; charset=utf-8');
+      
+      })
+    
+    
+    })
   
     it('should create a new booking (JSON)', () => {
-      cy.request({
-        method: 'POST',
-        url: `${apiUrl}/booking`,
-        headers: { 'Content-Type': 'application/json' },
-        body: {
-          firstname: 'John',
-          lastname: 'Doe',
-          totalprice: 123,
-          depositpaid: true,
-          bookingdates: { checkin: '2025-08-01', checkout: '2025-08-05' },
-          additionalneeds: 'Breakfast'
-        }
-      }).its('body').then((body) => {
-        expect(body).to.have.property('bookingid');
-        expect(body).to.have.property('booking');
-        bookingId = body.bookingid;
+      cy.fixture('api_data/bookingData.json').then((bookingData) => {
+        // Optional modifications:
+          bookingData.firstname = "Updatedfirstname";
+          bookingData.lastname = "Updatedlastname";
+        cy.log(`Booking Body: ${JSON.stringify(bookingData)}`);
+    
+        cy.request({
+          method: 'POST',
+          url: `${apiUrl}/booking`,
+          headers: { 'Content-Type': 'application/json' },
+          body: bookingData
+        }).its('body').then((body) => {
+          expect(body).to.have.property('bookingid');
+          expect(body).to.have.property('booking');
+          bookingId = body.bookingid;
+          cy.log(`Booking ID: ${bookingId}`);
+        });
       });
     });
   
     it('should retrieve the booking by ID', () => {
       cy.request(`${apiUrl}/booking/${bookingId}`)
         .its('body')
-        .should('include', { firstname: 'John', lastname: 'Doe' });
+        .should('include', { firstname: 'Updatedfirsname', lastname: 'Updatedlastname' });
     });
   
     it('should create an auth token', () => {

@@ -147,3 +147,40 @@ Register
 Forgotten Password
 My Account
 
+----------------------------------------------------------------------- 
+
+API - Application Programming Interface
+
+API
+
+Hotel(Customer)-------> Waiter -------> Chef(Kitchen)
+
+Chef(Kitchen)--------->Waiter--------->Customer
+
+Waiter --> APIs
+
+APIs - Backend Engineer -
+
+Postman, Bruno, Swagger, ReadyAPI
+
+API - CRUD Operation - Create Read Update and Delete
+
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods
+
+- POST --> API Request Body(JSON) --> 
+Creating a new record in DB -> IRCTC DB - USERDETAIL - Select * from USERDETAIL where email = 'demo@demo.com'
+
+Message - User Registered Successfully --> API Response(JSON)
+
+POST
+GET
+PUT
+PATCH
+DELETE
+
+HTTP STATUS CODE - https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status
+1XX - 
+2XX - 
+3XX - 
+4XX - 
+5XX - 
