@@ -184,3 +184,62 @@ HTTP STATUS CODE - https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/S
 3XX - 
 4XX - 
 5XX - 
+
+
+To run at specific time -
+
+name: Run Cypress E2E Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  schedule:
+    - cron: '30 14 * * *' # 8 PM IST
+    - cron: '30 8 * * *'  # 2 PM IST
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Verify Cypress installation
+        run: npx cypress verify
+
+      - name: Run Cypress tests in e2e folder
+        run: npx cypress run --spec "cypress/e2e/**/*.cy.js"
+
+      - name: Upload Cypress screenshots (on failure)
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots
+
+      - name: Upload Cypress videos
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cypress-videos
+          path: cypress/videos
+
+
+===========
+1. Successful Register --> You are on logged In page -> You need to add one assertion -> All the text which is after registration
+
+
+2. Same user for Login
