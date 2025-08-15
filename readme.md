@@ -243,3 +243,30 @@ jobs:
 
 
 2. Same user for Login
+
+==================================
+
+GIT LIFE CYCLE -
+
+git user.name 
+git user.email
+
+git status
+git add <filepath>
+git add .
+git commit -m "Commit Message"
+git push origin main
+
+
+git branch
+git branch demo
+git checkout demo
+-----
+add your add
+
+git merge main
+git log
+
+https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html
+
+

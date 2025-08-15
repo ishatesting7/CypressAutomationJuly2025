@@ -110,6 +110,10 @@ class utiltyDemo{
     cy.get(selector).scrollIntoView();
   }
   
+  //22. To check the partial text contain in an elements
+  containsText(selector, text) {
+    cy.get(selector).should('contain', text);
+  }
   
 }
 

@@ -3,7 +3,7 @@ class parabankLogin
 
     loginUsernameInput = 'input[name="username"]';
     loginPasswordInput = 'input[name="password"]';
-    loginBtn = 'input[type="submit"]';
+    loginBtn = 'input[value="Log In"]';
 
     loginAfterRegistration(username, password)
     {
